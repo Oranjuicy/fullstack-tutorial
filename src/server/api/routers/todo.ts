@@ -1,3 +1,5 @@
+import { TRPCClientError } from "@trpc/client";
+import { TRPCError } from "@trpc/server";
 import { connect } from "http2";
 import { z } from "zod";
 import {
