@@ -1,11 +1,13 @@
 import type { Todo } from "~/types";
 
+
 type TodoProps = {
     todo: Todo
 }
 
 export default function Todo({ todo }: TodoProps) {
     const {id, text, done} = todo
+
 
     return (
         <>
@@ -17,11 +19,9 @@ export default function Todo({ todo }: TodoProps) {
                     {text}
                 </label>
             </div>
-            <button className="text-white bg-blue-700 hover:bg-blue-800 rounded focus:ring-4 focus:outline-no">
+            <button className="text-white bg-blue-700 p-1 hover:bg-blue-800 rounded focus:ring-4 focus:outline-no">
                 Delete</button>
         </div>
-
-           
         </>
     )
 };

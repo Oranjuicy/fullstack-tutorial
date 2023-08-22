@@ -16,19 +16,9 @@ export const todoRouter = createTRPCRouter({
         userId: ctx.session.user.id
       }
     })
-   ///Needs to be chancged to return
-    console.log("todos from primsa" , todos.map(({id, text, done}) => ({id, text, done})));
+  
+    return todos.map(({id, text, done}) => ({id, text, done}));
     
-    return [{
-      id: "fake",
-      text: "fake text",
-      done: false,
-    },
-    {
-      id: "fake2",
-      text: "fake text2",
-      done: true,
-    }]
   }),
 
   create: protectedProcedure

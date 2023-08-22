@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { api } from "~/utils/api";
 import Todos from "~/Components/Todos";
+import CreateTodos from "~/Components/CreateTodo";
 
 export default function Home() {
   const {data: sessionData} = useSession()
@@ -20,6 +21,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 rounded-xl bg-white/10 p-4 text-white">
               <h3 className="text-xl font-bold">Todos</h3>
               <Todos />
+              <CreateTodos />
             </div>
           </div>
          )}
